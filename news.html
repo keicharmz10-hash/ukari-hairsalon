@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | u★kuri Hair Salon | 岡本・芦屋の自然派美容室</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-- meta property desc,title,img,type,site -->
+  <meta name="description" content="岡本・芦屋の自然派美容室 u★kuri。上質な癒し空間と丁寧なカウンセリング。">
+  <meta property="og:title" content="u★kuri Hair Salon">
+  <meta property="og:description" content="自然と調和する上質なヘアサロン">
+  <meta property="og:image" content="img/ogimage.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="u★kuri Hair Salon">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="img/favicon.png">
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- AOS Link -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+  <div id="progressBar"></div>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo/logo(1).png" alt="u★kuri logo">
+      </a>
+    </div>
+    <!-- Main Nav -->
+    <nav class="nav">
+      <a href="index.html" class="nav-link" data-ja="トップ" data-en="Top">Top</a>
+      <a href="salons.html" class="nav-link" data-ja="サロン" data-en="Salons">Salons</a>
+      <a href="menu.html" class="nav-link" data-ja="メニュー" data-en="Menu">Menu</a>
+      <a href="hairstyle.html" class="nav-link" data-ja="ヘアスタイル" data-en="Hair Style">Hair Style</a>
+      <a href="product.html" class="nav-link" data-ja="商品" data-en="Product">Product</a>
+      <a href="news.html" class="nav-link active" data-ja="ニュース" data-en="News">News</a>
+      <a href="recruit.html" class="nav-link" data-ja="採用情報" data-en="Recruit">Recruit</a>
+      <a href="contact.html" class="nav-link" data-ja="連絡先" data-en="Contact">Contact</a>
+      <!-- language toggle inside menu -->
+      <button id="langToggle" class="lang-btn">EN / JP</button>
+    </nav>
+    <!-- reservation bar -->
+    <a href="reservation.html" class="reserve" data-ja="ご予約" data-en="Reserve">Reserve
+    </a>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  <section class="news-page" data-aos="fade-up" data-aos-delay="200">
+    <h1 class="news-title" data-aos="fade-up" data-ja="ニュース" data-en="News">ニュース</h1>
+    <div class="news-container">
+      <!-- NEWS 1 -->
+      <div class="news-item">
+        <img src="img/stores/甲子園店.jpg" alt="" class="news-img">
+        <div class="news-text">
+          <p class="news-category">NEWS / u★kuri</p>
+          <h2 data-ja="甲子園店 2026.3.24 GRAND OPEN！" data-en="Our new Koshien Branch opens March 24, 2026!">甲子園店 2025.3.24
+            GRAND OPEN！
+          </h2>
+          <p class="news-date">2026.1.24</p>
+        </div>
+      </div>
+      <hr>
+      <!-- NEWS 2 -->
+      <div class="news-item">
+        <img src="img/news/kanshasai.jpg" alt="" class="news-img">
+        <div class="news-text">
+          <p class="news-category">NEWS / u★kuri</p>
+          <h3 data-ja="お客様感謝セールのお知らせ" data-en="Customer Appreciation Sale Announcement">お客様感謝セールのお知らせ</h3>
+          <p class="news-date">2026.1.13</p>
+        </div>
+      </div>
+      <hr>
+      <!-- NEWS 3 -->
+      <div class="news-item">
+        <img src="img/news/summervacay.jpg" alt="" class="news-img">
+        <div class="news-text">
+          <p class="news-category">NEWS / u★kuri</p>
+          <h3 data-ja="夏季休暇のお知らせ" data-en="Summer Holiday Notice">夏季休暇のお知らせ</h3>
+          <p class="news-date">2025.08.10</p>
+        </div>
+      </div>
+      <hr>
+      <!-- NEWS 4 -->
+      <div class="news-item">
+        <img src="img/news/questioner.jpg" alt="" class="news-img">
+        <div class="news-text">
+          <p class="news-category">NEWS / u★kuri</p>
+          <h3 data-ja="従業員幸福度アンケートで全国一位！" data-en="Ranked No.1 Nationwide in Employee Happiness Survey!">従業員幸福度アンケートで全国一位！</h3>
+          <p class="news-date">2025.06.15</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- modal -->
+  <div class="modal">
+    <div class="modal-box">
+      <span class="close">&times;</span>
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <p>© 2026 u★kuri Hair Salon</p>
+  </footer>
+  <!-- script -->
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      easing: "ease-out-cubic",
+      once: false
+    });
+  </script>
+</body>
+
+</html>
