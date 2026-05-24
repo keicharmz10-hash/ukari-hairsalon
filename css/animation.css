@@ -1,0 +1,402 @@
+/* ==============================
+   LOGO FLOAT
+============================== */
+
+.logo img {
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ==============================
+   SCROLL ANIMATIONS
+============================== */
+
+/* Fade In (good for paragraphs) */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity .9s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+
+/* Zoom In (best for images) */
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(.9);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ==============================
+   STYLIST CARD ANIMATION
+============================== */
+
+.stylist-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .9s ease;
+}
+
+.stylist-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* stagger animation */
+
+.stylist-card:nth-child(1) {
+  transition-delay: .1s;
+}
+
+.stylist-card:nth-child(2) {
+  transition-delay: .2s;
+}
+
+.stylist-card:nth-child(3) {
+  transition-delay: .3s;
+}
+
+.stylist-card:nth-child(4) {
+  transition-delay: .4s;
+}
+
+
+/* stylist hover */
+
+.stylist-card img {
+  transition: transform .5s ease;
+}
+
+.stylist-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ==============================
+   GALLERY AUTO SLIDER
+============================== */
+
+.gallery-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  width: 400%;
+  animation: hairSlider 22s linear infinite;
+}
+
+.slider-track img {
+  width: 25%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-right: 30px;
+  transition: transform .4s ease;
+}
+
+.slider-track img:hover {
+  transform: scale(1.06);
+}
+
+@keyframes hairSlider {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  45% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  70% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+  100% {
+    transform: translateX(-75%);
+  }
+
+}
+
+
+/* ==============================
+   SHIMMER (LUXURY EFFECT)
+============================== */
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(120deg,
+      transparent,
+      rgba(255, 230, 190, 0.25),
+      transparent);
+
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+
+  60% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+
+/* ==============================
+   SPLASH TRANSITION
+============================== */
+
+.splash {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #990000;
+  border-radius: 50%;
+  transform: scale(0);
+}
+
+.splash.active {
+  animation: splashExpand 1s ease forwards;
+}
+
+@keyframes splashExpand {
+
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(30);
+  }
+
+  100% {
+    transform: scale(120);
+    opacity: 0;
+  }
+
+}
+
+
+/* ==============================
+   LOADER INTRO
+============================== */
+
+.anniversary-loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #3f5f3b 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  animation: fadeOut 1.2s ease forwards;
+  animation-delay: 6s;
+}
+
+.anniversary-content {
+  text-align: center;
+}
+
+.anniversary-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  letter-spacing: 8px;
+  color: #e6d3a3;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: loaderFadeUp 2s ease forwards;
+
+  text-shadow: 0 0 20px rgba(230, 211, 163, 0.2);
+}
+
+
+/* gold line */
+
+.line {
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e6d3a3, transparent);
+  margin: 25px auto;
+
+  animation: lineGrow 1.8s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes lineGrow {
+  to {
+    width: 200px;
+  }
+}
+
+
+/* ==============================
+   SVG LOGO DRAW
+============================== */
+
+.logo-svg {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-svg path {
+  stroke: #e6d3a3;
+  stroke-width: 2.2;
+  fill: transparent;
+
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+
+  animation: drawLogo 3.5s cubic-bezier(.77, 0, .18, 1) forwards;
+  animation-delay: 2s;
+
+  filter: drop-shadow(0 0 6px rgba(230, 211, 163, 0.4));
+}
+
+@keyframes drawLogo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* ==============================
+   LOADER FADE OUT
+============================== */
+
+@keyframes fadeOut {
+
+  0% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+}
+
+
+/* ==============================
+   LOADER TEXT ANIMATION
+============================== */
+
+@keyframes loaderFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==============================
+   GRAND OPENING NEON
+============================== */
+
+.neon-text {
+  font-size: 4rem;
+  color: #fff;
+
+  text-shadow:
+    0 0 5px #ed7f6e,
+    0 0 10px #ed7f6e,
+    0 0 20px #ed7f6e,
+    0 0 40px #ed7f6e,
+    0 0 80px #ed7f6e;
+
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+
+  0% {
+    text-shadow:
+      0 0 5px #ed7f6e,
+      0 0 10px #ed7f6e,
+      0 0 20px #ed7f6e,
+      0 0 40px #ed7f6e,
+      0 0 80px #ed7f6e;
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px #BF00FF,
+      0 0 20px #BF00FF,
+      0 0 40px #BF00FF,
+      0 0 80px #BF00FF,
+      0 0 160px #BF00FF;
+  }
+
+}
